@@ -21,6 +21,8 @@ dependencyResolutionManagement {
 
 rootProject.name = "Todo App"
 include(":app")
+include(":common:general:extensions")
+include(":common:general:models")
 include(":common:ui:resources:drawables")
 include(":common:ui:resources:strings")
 include(":common:ui:theme")
