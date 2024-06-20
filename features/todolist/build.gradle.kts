@@ -10,12 +10,12 @@ android {
     compileSdk = 34
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = JavaVersion.VERSION_11.toString()
     }
 
     buildFeatures {
@@ -45,7 +45,6 @@ dependencies {
 
     implementation(libs.androidx.activity.compose)
 
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
 
@@ -54,11 +53,21 @@ dependencies {
     implementation(libs.androidx.animation)
 
     implementation(libs.androidx.hilt.navigation.compose)
-
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
 
+    testImplementation(libs.ui.test.junit4)
+
+    testImplementation(libs.kotlinx.coroutines.test)
+
     testImplementation(libs.junit)
+    testImplementation(libs.mockk.agent)
+    testImplementation(libs.mockk.android)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.inline)
+    testImplementation(libs.androidx.core.testing)
+
+    testImplementation(libs.androidx.junit.ktx)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }

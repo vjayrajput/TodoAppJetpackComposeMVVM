@@ -30,4 +30,13 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // MockK dependencies
+    testImplementation(libs.mockk)
+    testImplementation(libs.mockito.core)
+
+    testImplementation(kotlin("test"))
+
+    // Coroutines test dependency
+    testImplementation(libs.kotlinx.coroutines.test)
 }

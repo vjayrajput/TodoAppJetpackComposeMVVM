@@ -20,21 +20,34 @@ android {
 
 dependencies {
 
-
     implementation(project(":business:data:entity"))
     implementation(project(":business:domain:main"))
     implementation(project(":business:domain:model"))
 
     implementation(project(":common:domain:api"))
 
-    implementation(libs.androidx.room.runtime) // Use the latest version
-    implementation(libs.androidx.room.ktx) // Kotlin extensions forRoom
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
     ksp(libs.androidx.room.compiler)
 
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
 
+    // Room testing dependencies
+    testImplementation(libs.androidx.room.testing)
+
+
+    // MockK dependencies
+    testImplementation(libs.mockk)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.inline)
+
+    // Coroutines test dependency
+    testImplementation(libs.kotlinx.coroutines.test)
+
     testImplementation(libs.junit)
+    testImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.junit)
+    testImplementation(libs.androidx.junit.ktx)
     androidTestImplementation(libs.androidx.espresso.core)
 }

@@ -19,5 +19,5 @@ android {
 
 dependencies {
 
-    implementation(libs.androidx.room.runtime) // Use the latest version
+    implementation(libs.androidx.room.runtime)
 }

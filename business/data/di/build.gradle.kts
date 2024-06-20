@@ -24,9 +24,7 @@ dependencies {
     implementation(project(":business:data:main"))
     implementation(project(":business:domain:main"))
 
-    implementation(libs.androidx.room.runtime) // Use the latest version
-    //implementation(libs.androidx.room.ktx) // Kotlin extensions forRoom
-    //ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.runtime)
 
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
