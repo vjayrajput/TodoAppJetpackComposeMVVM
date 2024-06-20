@@ -5,4 +5,5 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android) apply false
     alias(libs.plugins.google.dagger.hilt) apply false
     alias(libs.plugins.google.ksp) apply false
+    id("jacoco")
 }

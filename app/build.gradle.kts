@@ -1,8 +1,11 @@
+apply(from = "$rootDir/config/analytics/jacoco.gradle")
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.google.ksp)
     alias(libs.plugins.google.dagger.hilt)
+    id("jacoco")
 }
 
 android {
@@ -24,6 +27,10 @@ android {
     }
 
     buildTypes {
+        debug {
+            enableUnitTestCoverage = true
+            enableAndroidTestCoverage = true
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(
