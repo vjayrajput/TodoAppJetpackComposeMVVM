@@ -37,3 +37,5 @@ include(":common:ui:components")
 include(":common:ui:resources:drawables")
 include(":common:ui:resources:strings")
 include(":common:ui:theme")
+
+include(":features:todoadd")
