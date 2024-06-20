@@ -58,49 +58,23 @@ android {
 }
 
 dependencies {
+    implementation(project(":common:navigation"))
+    implementation(project(":common:ui:theme"))
 
-    implementation(libs.androidx.activity.compose)
+    implementation(project(":features:todoadd"))
+    implementation(project(":features:todolist"))
+
     implementation(platform(libs.androidx.compose.bom))
 
-    // Compose theme
-    implementation(libs.androidx.material3)
-    implementation(libs.androidx.foundation)
-    implementation(libs.androidx.animation)
-
-    // Compose navigation
+    implementation(libs.androidx.multidex)
     implementation(libs.androidx.navigation.compose)
 
-    // Dagger Hilt
-    implementation(libs.androidx.hilt.navigation.compose)
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
-
-    // Multidex
-    implementation(libs.androidx.multidex)
-
-    // Jetpack Compose
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.runtime.livedata)
-
-    // ViewModel and LiveData
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.lifecycle.livedata.ktx)
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
-
-    // Kotlin Coroutines and Flow
-    implementation(libs.kotlinx.coroutines.core)
-    implementation(libs.kotlinx.coroutines.android)
-
-    // Room
-    implementation(libs.androidx.room.runtime) // Use the latest version
-    implementation(libs.androidx.room.ktx) // Kotlin extensions forRoom
-    ksp(libs.androidx.room.compiler) // Annotation processor for Room
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
-    debugImplementation(libs.androidx.ui.tooling)
-    debugImplementation(libs.androidx.ui.test.manifest)
 }
