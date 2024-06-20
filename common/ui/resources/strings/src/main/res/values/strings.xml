@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_title">ToDo App</string>
+    <string name="press_add_button_to_add_a_todo_item">Press the + button to add a TODO item.</string>
+    <string name="title_todo_add">Todo Add</string>
+    <string name="enter_new_item">Enter new item</string>
+    <string name="add_todo">Add TODO</string>
+    <string name="please_enter_todo_title">Please enter a todo title</string>
+    <string name="delete_todo">Delete todo</string>
+    <string name="no_search_results_found">No search results found</string>
+    <string name="alter_title">Error</string>
+    <string name="label_okay">Okay</string>
+</resources>
