@@ -28,6 +28,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.app.todo.common.navigation.NavigationResult
@@ -97,7 +98,6 @@ private fun AddTodoView(modifier: Modifier = Modifier, viewModel: TodoAddViewMod
             OutlinedTextField(
                 value = todoTitleText,
                 onValueChange = {
-                    //todoTitleText = it
                     viewModel.onEvent(TodoAddEvent.EnteredTitle(it))
                 },
                 modifier = Modifier
@@ -106,7 +106,10 @@ private fun AddTodoView(modifier: Modifier = Modifier, viewModel: TodoAddViewMod
                 label = { Text(text = stringResource(id = StringResources.enterNewItem)) },
                 textStyle = MaterialTheme.typography.bodyLarge,
                 singleLine = true,
-                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
+                keyboardOptions = KeyboardOptions(
+                    imeAction = ImeAction.Done,
+                    capitalization = KeyboardCapitalization.Sentences
+                ),
                 keyboardActions = KeyboardActions(
                     onDone = {
                         keyboardController?.hide()

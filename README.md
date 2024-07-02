@@ -42,7 +42,7 @@ Part 1: TODO Creation
 This video shows the process of creating a TODO item, detailing the main screen layout and the
 steps to add new items.
 
-[Watch Part 1](https://github.com/vjayrajput/TodoAppJetpackComposeMVVM/assets/11531822/d54bb26b-74f2-466b-ab01-13c89d30c475)
+[Watch Part 1](https://github.com/vjayrajput/TodoAppJetpackComposeMVVM/assets/11531822/85509aa8-bd82-431e-be05-c105e3241cc8)
 
 Part 2: TODO Creation Error Handling
 
@@ -50,14 +50,14 @@ Part 2: TODO Creation Error Handling
 This video illustrates the error handling mechanism in action, demonstrating what happens when an
 error occurs while adding a TODO item.
 
-[Watch Part 2](https://github.com/vjayrajput/TodoAppJetpackComposeMVVM/assets/11531822/9a023508-2198-4c2a-9818-6c7ae1b7676c)
+[Watch Part 2](https://github.com/vjayrajput/TodoAppJetpackComposeMVVM/assets/11531822/e1e64626-fe63-476d-8e67-4911357099b9)
 
 Part 3: Handling Application State in Various Scenarios
 
 This video explains how the app manages states across different scenarios, including screen
 rotations and navigation changes.
 
-[Watch Part 3](https://github.com/vjayrajput/TodoAppJetpackComposeMVVM/assets/11531822/50f0fa30-ffd9-48a5-ad56-9531cdec7f1c)
+[Watch Part 3](https://github.com/vjayrajput/TodoAppJetpackComposeMVVM/assets/11531822/59e8a3c0-0f68-41a1-8e63-32147b156a15)
 
 ## Technologies Used
 
@@ -71,8 +71,3 @@ rotations and navigation changes.
 ## License
 
 * This project is licensed under the MIT License - see the LICENSE file for details.
-
-
-
-
-

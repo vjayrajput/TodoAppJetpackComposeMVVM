@@ -8,6 +8,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import com.app.todo.ui.resources.drawables.DrawableResources
@@ -19,7 +20,7 @@ fun TodoAppTopBar(
     navigateBack: (() -> Unit)? = null
 ) {
     TopAppBar(
-        title = { Text(text = title) },
+        title = { Text(text = title, color = Color.White) },
         colors = TopAppBarDefaults.topAppBarColors()
             .copy(containerColor = MaterialTheme.colorScheme.primaryContainer),
         navigationIcon = {
@@ -27,7 +28,8 @@ fun TodoAppTopBar(
                 IconButton(onClick = { navigateBack.invoke() }) {
                     Icon(
                         imageVector = ImageVector.vectorResource(id = DrawableResources.icBaselineArrowBack24),
-                        contentDescription = "Back"
+                        contentDescription = "Back",
+                        tint = Color.White,
                     )
                 }
             } else null

@@ -30,6 +30,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -156,12 +157,17 @@ private fun TodoListTopBar(
         )
     } else {
         TopAppBar(
-            title = { Text(text = stringResource(id = StringResources.appTitle)) },
+            title = {
+                Text(
+                    text = stringResource(id = StringResources.appTitle),
+                    color = Color.White,
+                )
+            },
             colors = TopAppBarDefaults.topAppBarColors()
                 .copy(containerColor = MaterialTheme.colorScheme.primaryContainer),
             actions = {
                 IconButton(onClick = { onSearchClicked(true) }) {
-                    Icon(Icons.Filled.Search, contentDescription = "Search")
+                    Icon(Icons.Filled.Search, contentDescription = "Search", tint = Color.White)
                 }
             }
         )
